@@ -81,6 +81,7 @@ $app->singleton(
 $app->register(App\Providers\StatelessSentinelServiceProvider::class);
 $app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
 $app->register(Dingo\Api\Provider\LumenServiceProvider::class);
+$app->register(Barryvdh\Cors\LumenServiceProvider::class);
 
 if ( ! $app->environment('production')) {
     $app->register(Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);

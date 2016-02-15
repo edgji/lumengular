@@ -10,6 +10,8 @@ class StatelessSentinelServiceProvider extends SentinelServiceProvider
     public function register()
     {
         $this->app->configure('sentinel');
+        config(['cartalyst.sentinel' => config('sentinel')]);
+        config(['sentinel' => null]);
 
         parent::register();
     }
